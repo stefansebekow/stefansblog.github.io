@@ -7,10 +7,21 @@ description: "Die weltweit größte und anerkannteste Linux-Zertifizierung LPIC-
 # Was ist LPIC-1?
 
 Das Linux Professional Institute (LPI) ist eine 1999 in New Brunswick, Kanada gegründete Non-Profit-Organisation, die professionelle Zertifizierungen für das Betriebssystem GNU/Linux entwickelt, welche unabhängig von Software- oder Schulungsanbietern (also weitgehend distributionsunabhängig) sind. <br><br>
-Als Einstieg gibt es hier das Zertifizierungsprogramm: "Linux Professional Institute Certification 1 (LPIC)", dessen erste Stufe allgemeines Linux-Wissen prüft, wie es für Poweruser, Systemadministratoren, Entwickler oder Berater wichtig ist. Die höheren Stufen gehen stärker in Richtung System- und Netzwerkadministration. <br><br>
-Vorab gesagt: Das LPIC-1 ist verglichen mit anderen Einstiegszertifikaten äußerst umfangreich! Beispielsweise werden in der Prüfung regelmäßig die einzelnen Optionen und Flags von im Alltag nicht allzu häufig verwendeten Linux-Befehlen per Multiple-Choice abgefragt, die man sich im Terminal jederzeit schlichtweg durch das Aufrufen der Man-Page wieder auffrischen könnte. Das hat mich letztendlich abgeschreckt mich für die Prüfung anzumelden. Es ist mühselig und lohnt für einen Einsteiger schlichtweg nicht die gesamte Batterie an Linux Kommandos mitsamt aller Flags auswendig zu lernen.
+
+Als Einstieg dient hier das Zertifizierungsprogramm: "Linux Professional Institute Certification 1 (LPIC)", dessen erste Stufe allgemeines Linux-Wissen prüft, wie es für Poweruser, Systemadministratoren, Entwickler oder Berater wichtig ist. Die höheren Stufen gehen stärker in Richtung System- und Netzwerkadministration. <br><br>
+
+Um LPIC-1 zertifiziert zu werden, muss der Prüfungsteilnehmer folgendes beherrschen:
+
+    * Die Architektur eines Linux-Systems verstehen
+    * Eine Linux-Workstation einschließlich X11 installieren, warten und als Netzwerk-Client einrichten können
+    * Auf der Linux-Befehlszeile arbeiten können, einschließlich gängiger GNU- und Unix-Befehle;
+    * Mit Dateien und Zugriffsberechtigungen sowie der Systemsicherheit umgehen können
+    * Einfache Wartungsaufgaben: Hinzufügen von Benutzern zu einem größeren System, Backup und Wiederherstellung, Herunterfahren und Neustart
+
+LPIC-1 ist verglichen mit anderen Einstiegszertifikaten äußerst umfangreich! Beispielsweise werden in de den Prüfungen regelmäßig einzelne Optionen und Flags von im Alltag nicht allzu häufig verwendeten Linux-Befehlen per Multiple-Choice abgefragt, die man sich im Terminal jederzeit schlichtweg durch das Aufrufen der Man-Page wieder auffrischen könnte. Das hat mich persönlich abgeschreckt mich für die Prüfung anzumelden. Es ist mühselig und lohnt für einen Einsteiger schlichtweg nicht die gesamte Batterie an Shell Commands mitsamt aller Flags auswendig zu lernen.
 <br><br>
 # Warum trotzdem dafür lernen, wenn du vielleicht die Prüfung nicht machst?
+
 Warum es sich jedoch lohnt zumindest einmal einen Vorbereitungskurs von Anfang bis Ende abzuschließen ist der Fakt, dass man hier systematisch vom Aufbau, über die Funktion bis hin zur praktischen Anwendung einen Einstieg in den Kern aller Linuxdistributionen erhält und somit ein starkes Orientierungswissen aufbaut. Alleine das Folgen eines Onlinekurses bringt euch die Basis bei euch in verschiedenen Linuxdistros bewegen zu können und in der Lage zu sein praxisnahe Szenarien, wie das Aufsetzen eines virtuellen Servers mitsamt Datenträgerformatierung und Partitionierung, nach einem vorher festgelegtem Ziel durchzuspielen oder sogar eines Tages mal vollständig zu automatisieren ohne bei jedem Grundlagenbefehl noch einmal nachschauen zu müssen.
 <br><br>
 Um mehr Spaß dabei zu haben einen Einstieg in die Linux-Administration zu finden, muss die allgemeine Navigation, das Erstellen, Kopieren und Löschen von Elementen, die Änderung von Dateiberechtigungen, sowie ein Verständnis über Rollen, Funktionen und in welchen Bereichen was geregelt wird einfach sitzen. Erst, wenn man durch das Terminal wirken kann und nicht ständig vom Weg abkommt, kann man effektiv Anleitungen folgen und dabei etwas lernen!
