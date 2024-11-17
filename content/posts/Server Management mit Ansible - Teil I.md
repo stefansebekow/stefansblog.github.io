@@ -81,3 +81,5 @@ Ein weiteres und deutlicheres Beispiel für die Grundidee von Ansible ist der fo
 
 
 ```
+
+Das sind also zwei erste Beispiele für eine auf Ansible basierende und grundlegende Serveradministration. Durch die Verwendung von Playbooks, Roles und anderen fortgeschrittenen Funktionen lassen sich sebstverständlich auch noch komplexe Aufgaben automatisieren und wiederholen. Dazu in einem späteren Beitrag mehr.
