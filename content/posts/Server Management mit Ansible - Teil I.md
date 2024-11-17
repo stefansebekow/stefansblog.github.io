@@ -55,3 +55,29 @@ Das sieht so aus:
 
 ```
 
+Ein weiteres und deutlicheres Beispiel für die Grundidee von Ansible ist der folgende task mit dem wir Konfigurationsabweichungen in der SSHD Config in regelmäßigen Abständen überschreiben können. Es mag sein, dass ich einmal auf eine Passwortanmeldung ausweichen muss und dafür die config ändere. Es mag sogar sein, dass ich vergesse die Änderung rückgängig zu machen. Im Grunde stellt Ansible dann aber den durch mich eigentlich gewollten Zustand (zb. nur ssh key, keine root anmeldung etc) in regelmäßigen Zeitabständen und durch das Einfügen eines Blocks am Anfang der Config ("first come first serve" Prinzip!) wieder her. 
+
+```
+---
+- hosts: all
+  tasks:
+  - name: sshd configuration file update
+    blockinfile:
+      path: /etc/ssh/sshd_config
+      insertbefore: BOF # Beginning of the file
+      marker: "# {mark} ANSIBLE MANAGED BLOCK BY LINUX-ADMIN"
+      block: |
+        PermitRootLogin no
+        PubkeyAuthentication yes
+        AuthorizedKeysFile .ssh/authorized_keys
+        PasswordAuthentication no
+      backup: yes
+      validate: /usr/sbin/sshd -T -f %s
+
+  - name: Restart SSHD
+    service:
+      name: sshd
+      state: restarted
+
+
+```
