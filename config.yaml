@@ -78,8 +78,9 @@ params:
   homeInfoParams:
     Title: "Hi! Mein Name ist Stefan. Willkommen auf meinem Blog."
     Content: >
-     Ich bin passionierter Systemadministrator und Teamleiter und interessiere mich für alle Themen rund um Administration
-     und Netzwerk. In diesem Blog dokumentiere ich meine alten und zukünftigen Projekte, während ich besser Programmieren lerne, meinen Blog mit Hugo aufbaue und meine Powershell- und Bash-Kenntnisse verbessere. Momentan bin ich im Bereich der klinischen Forschung in einer der größten Kohortenstudien weltweit tätig
+     Ich bin mit Leidenschaft IT-Systemadministrator und interessiere mich für alles rund um Administration,
+     Netzwerk und IT-Sicherheit. In diesem Blog dokumentiere ich meine alten und zukünftigen Projekte, während ich besser Programmieren lerne und meine Powershell- und Bash-Kenntnisse verbessere. 
+     Momentan arbeite ich im Bereich der klinischen Forschung und helfe bei der Umsetzung einer der umfassendsten epidemiologischen Studien in Deutschland.
      <br /> Kontakt: **mail {äät} stefansblog.org**
      <br/><br/> 
      <div class="container">

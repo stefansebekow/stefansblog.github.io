@@ -1,15 +1,15 @@
 ---
-title: "best practice: Erste Schritte nach dem Aufsetzen eines Servers unter Cent OS"
+title: "Grundlagen: Erste Schritte nach dem Aufsetzen eines Servers unter Cent OS"
 date: 2022-10-16
-description: Erhöhe die Sicherheit auf deinem CentOS 8 Server und richte dir als allererstes einen Alltagsnutzer ein!
+description: Erhöhe die Sicherheit auf deinem Linux-Server, indem du ein paar Grundlagenstandards befolgst
 
 ---
 
 # Einleitung
 
-Wenn du das erste Mal einen CentOS 8 Server aufsetzt, gibt es einige Einstellungen, die du als Grundlagenkonfiguration übernehmen kannst und dieser Beitrag richtet sich an dich.  Ich habe mir diese im Zuge meiner LPIC-1 Vorbereitung ein paar anbsolut grundlegende Schrite zusammenrecherchiert und trage dieser hier zusammen. Mit folgender Anleitung erhöhst du die Sicherheit und Nutzbarkeit deines CentOS Servers und erhältst eine gute Basis für dein individuelles Setup. Du solltest hierfür bereits wissen, wie du dich per SSH auf eine virtuelle Maschine verbindest. 
+ Dieser Beitrag richtet sich an Einsteiger im Bereich Linux-Serveradministration. Wenn du das erste Mal einen Linux-Server aufsetzt (in diesem Fall als Beispiel CentOS 8), gibt es einige Einstellungen und Maßnahmen, die du als Grundlagenkonfiguration übernehmen kannst. Mit folgender Anleitung erhöhst du die Sicherheit und Nutzbarkeit deines Servers und erhältst eine gute Basis für dein individuelles Setup. Du solltest hierfür bereits wissen, wie du dich per SSH auf eine virtuelle Maschine verbindest. 
 
-# Schritt 1 — I am (g)root: Logge dich als Root ein
+# Schritt 1 — "I am (g)root" oder Logge dich als Root-User ein
 
 Um dich beispielsweise per SSH in deinem Server einzuloggen wirst du seine öffentliche IP-Adresse, das Passwort und gegebenenfalls den jeweiligen, privaten SSH-Schlüssel benötigen, um dich als Root-User zu authentifizieren. Wie und mit welchen Werkzeugen du dich per "Secure Shell Script" mit einem virtualisiertem Server verbinden kannst, zeige ich dir in einer anderen Anleitung.
 
@@ -17,7 +17,7 @@ Um dich also von einem anderen System als Root anzumelden, öffne die Konsole un
 ```
     ssh root@192.168.1.125
 ```
-Da dir die Maschine bekannt ist, bestätige die anschließenden Warnhinweise und wähle dich entweder mit deinem Passwort oder mit deinem passwortgesicherten SSH-Schlüssel ein. Bei der ersten Anmeldung als "root" wirst du aufgefordert dein Root-Passwort anschließend zu ändern.
+Da dir die Maschine bekannt ist, bestätige die anschließenden Warnhinweise und wähle dich mit deinem Passwort ein. Bei der ersten Anmeldung als "root" wirst du eventuell aufgefordert dein Root-Passwort anschließend zu ändern.
 
 # Was ist ein Root User?
 
@@ -25,7 +25,7 @@ Der Root User ist die administrative Funktion in jedem Linux System, die stets u
 
 Im nächsten Schritt setzen wir daher erst einmal einen zweiten Useraccount auf, mit dem wir im Alltag arbeiten können. Keine Sorge! Auch dieser User ist natürlich in Lage sein sich temporär Schreibrechte zu geben.
 
-# Schritt 2 — Wir erstellen ein Benutzerkonto
+# Schritt 2 — Erstelle ein Benutzerkonto
 
 Sobald du als Root angemeldet bist, kannst du das neue Benutzerkonto erstellen, mit dem wir uns von nun an anmelden werden.
 
@@ -39,7 +39,7 @@ Nächster Schritt, ein starkes Kennwort für den User setzen:
 ```
 Es folgt die Aufforderung, das Passwort zweimal einzugeben. Danach ist der Benutzer Paul einsatzbereit, aber zunächst erteilen wir diesem Benutzer zusätzliche Berechtigungen zur Verwendung des sudo-Befehls. Dadurch können wir bei Bedarf Befehle als Root ausführen. Das Erstellen von Nutzerkonten wirkt zwar trivial aber es ist wichtig nicht statt des Kommandos adduser - useradd zu verwenden. Das zu erläutern sprengt hier den Umfang und du findest das schnell durch ausprobieren selbst raus.  
 
-# Schritt 3 – Gewährung von Administratorrechten
+# Schritt 3 – Gewährung von Administrationsrechten
 
 Jetzt haben wir ein neues Benutzerkonto mit regulären Kontoberechtigungen. Manchmal müssen wir jedoch möglicherweise Adminaufgaben erledigen.
 
@@ -53,7 +53,7 @@ Führe als Root diesen Befehl aus, um den Nutzer Paul zur Wheel-Gruppe hinzuzuf�
     usermod -aG wheel Paul
 ```
 
-# Schritt 4 — Wir richten eine einfache Firewall ein
+# Schritt 4 — Einrichtung einer einfachen Firewall
 
 Firewalls bieten ein grundlegendes Maß an Sicherheit für unseren Server und sind unabhängig vom Verwendungszweck fast obligatorisch. Wie werden, den Datenverkehr zu jedem Port auf unserem Server verweigern und nach und nach per Ausnahmen einzelne Ports freigeben. CentOS verfügt über einen Service namens firewalld, um diese Funktion auszuführen. Ein Tool namens firewall-cmd wird zum Konfigurieren der Firewall-Richtlinien von firewalld verwendet.
 
@@ -119,7 +119,7 @@ Das erlaubt uns jetzt zum Beispiel http traffic und eingehende Anfragen über Po
     firewall-cmd --reload
 ```
 
-# Schritt 5 — Wir richten Paul einen externen Zugriff ein 
+# Schritt 5 — Wir richten dem User Paul einen externen Zugriff ein 
 
 Da wir nun einen regulären Nicht-Root-Benutzer für den täglichen Gebrauch haben, müssen wir sicherstellen, dass wir ihn für die SSH-Verbindung zu unserem Server verwenden können.
 
@@ -171,5 +171,4 @@ Paul kann sich nun ohne Passwort anmelden (eine wahre win-win Situation ,), inde
 ``` 
 ssh paul@server_ip
 ```
-Wir merken uns: Ein Passwort-Login ist im Falle von SSH nur als Fallback zu gebrauchen. Mit einem Passwort gesicherten SSH-Key erhöhen wir 
-die Sicherheit vor unbefugtem Zugriff. Nun wo wir diese Grundlagen können, wird es einfach diesen Prozess zu "ansibilisieren". Dazu kommen wir ein anderes Mal. 
+Wir merken uns: Ein Passwort-Login ist im Falle von SSH nur als Fallback zu gebrauchen. Mit einem Passwort gesicherten SSH-Key erhöhen wir die Sicherheit vor unbefugtem Zugriff. Nun wo wir diese Grundlagen können, wird es einfach diesen Prozess zu "ansibilisieren". 
