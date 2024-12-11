@@ -1,10 +1,11 @@
 ---
 title: "Das elfte Gebot des NAS"
-date: 2024-12-12
-description:  Du sollst kein 100 TB großes Volume in einem RAID 5 Array fahren!
+date: 2024-12-11
+description:  
 
 ---
 
+# Du sollst kein 100 TB großes Volume in einem RAID 5 Array fahren!
 
 Dinge gibt es, die gibt es nicht. Leider scheint es aber aus meinen aktuellen Erfahrungen so, als müsste man das trotzdem einmal für die Nachwelt hier festhalten. Wer auch immer das liest und in Zeiten von günstigem Cloudstorage, aus "Gründen" trotzdem gezwungen ist große Datenmengen lokal auf eigenen NAS-Systemen zu sichern. Bitte! Spare nicht und plane Redundanz ein!  
 
