@@ -1,7 +1,7 @@
 ---
 title: "Grundlagen: Erste Schritte nach dem Aufsetzen eines Servers unter Cent OS"
 date: 2022-10-16
-description: Erhöhe die Sicherheit auf deinem Linux-Server, indem du ein paar Grundlagenstandards befolgst
+description: Erhöhe die Sicherheit auf deinem Linux-Server, indem du diese Grundlagenstandards befolgst
 
 ---
 

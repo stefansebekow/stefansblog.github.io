@@ -1,7 +1,7 @@
 ---
-title: Das elfte Gebot des NAS
+title: "Das elfte Gebot des NAS"
 date: 2024-12-12
-description:  Das elfte Gebot des NAS: Du sollst kein 100 TB großes Volume in einem RAID 5 Array fahren!
+description:  Du sollst kein 100 TB großes Volume in einem RAID 5 Array fahren!
 
 ---
 
@@ -16,7 +16,7 @@ RAID 5 bietet zwar eine gute Balance zwischen Datensicherheit und gewonnener Spe
 
 # Das eigentliche Hauptrisiko 
 
-Die Wiederherstellungszeit könnte so lang sein, dass du riskierst, dass weitere Festplatten ausfallen. Das ist nicht mal so weit her, da diese vielleicht zeitgleich beschafft wurden. Damit ist der nächste Ausfall vielleicht nicht soweit wie erhofft. Ein Ausfall einer Festplatte kann bei Raid5 Arrays ohne Datenverlust überbrückt werden. Bei der zweiten ist meist Schluss.  
+Die Wiederherstellungszeit könnte so lang sein, dass du riskierst, dass weitere Festplatten ausfallen. Das ist nicht mal so weit her, da diese vielleicht zeitgleich beschafft wurden. Damit ist der nächste Ausfall vielleicht nicht so weit wie erhofft. Ein Ausfall einer Festplatte kann bei Raid5 Arrays ohne Datenverlust überbrückt werden. Bei der zweiten ist meist Schluss.  
 
 
 # Schlechte Performance 
