@@ -31,7 +31,7 @@ Sobald du als Root angemeldet bist, kannst du das neue Benutzerkonto erstellen, 
 
 In diesem Beispiel wird ein neuer Benutzer namens "Paul" erstellt. Sie sollten ihn jedoch durch einen beliebigen Benutzernamen ersetzen:
 ```
-    <span style="color: blue;">adduser Paul</span>
+    adduser Paul
 ```
 Nächster Schritt, ein starkes Kennwort für den User setzen:
 ```
