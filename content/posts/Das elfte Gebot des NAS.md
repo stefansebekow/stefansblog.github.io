@@ -1,7 +1,7 @@
 ---
-title: "Das elfte Gebot des NAS"
+title: Das elfte Gebot des NAS
 date: 2024-12-12
-description:  "Das elfte Gebot des NAS: Du sollst kein 100 TB großes Volume in einem RAID 5 Array fahren!"
+description:  Das elfte Gebot des NAS: Du sollst kein 100 TB großes Volume in einem RAID 5 Array fahren!
 
 ---
 
@@ -30,18 +30,15 @@ Langsame Lesezeiten können dann störend sein, wenn häufig auf große Datenmen
 
 Anstatt sich auf ein einzelnes riesiges Volume zu konzentrieren, sollten wir über folgende Alternativen nachdenken!
 
-• Aufteilen des Datensatzes in kleinere, unabhängige Volumes für bessere Performance und Wartbarkeit. Aufteilung in kritische und unkritische Volumes. 
+* Aufteilen des Datensatzes in kleinere, unabhängige Volumes für bessere Performance und Wartbarkeit. Aufteilung in kritische und unkritische Volumes. 
 
-• Implementierung einer Backup-Lösung für kritische Daten.
+* Implementierung einer Backup-Lösung für kritische Daten.
 
-• Benutze Raid 6 Arrays 
+* Benutze Raid 6 Arrays 
 
-• Nutzung von Cloud-Speicherdiensten für Archivierung und Backup-Zwecke.
+* Nutzung von Cloud-Speicherdiensten für Archivierung und Backup-Zwecke.
 
 
 # Das Fazit
 
 Während es natürlich technisch möglich ist, ein 100 TB großes Volume mit RAID 5 auf einem NAS zu implementieren, ist es reines Glücksspiel, dass es hier nicht einmal zu einem kompletten Datenverlust kommt. Das Argument, "dass eine Hotspare verbaut sei" genügt in diesem Fall nicht. Während des ewig langen Rebuild-Prozesses wirst du mit diesem Wissen und falls es kein gutes Backup gibt, Nachts kein Auge zu bekommen!  
-
-
-
