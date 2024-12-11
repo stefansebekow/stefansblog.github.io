@@ -14,9 +14,13 @@ Netzwerkadministration** zu spezialisieren.
 In meinem Einstiegsberuf habe ich den Vorteil gehabt noch einen Hybrid zwischen On-Prem und Off-Prem Serverinfrastruktur kennengelernt zu haben. 
 <br><br>
 Daher interessiert mich momentan vor allem alles zu cloudbasierten IT-Services (zb. Kubernetes), Automatisierung via Ansible, Linux- und Windows Server Administration, sowie die Erweiterung meiner Grundlagen im Bereich PowerShell, Bash und Python.
+<brbr>
+
+
+<br>
 <img class="special-img-class" src="/images/Lebenslauf_StefanSebekow_1.jpg" />
 <brbr>
-<img class="special-img-class" src="/images/Lebenslauf_StefanSebekow_2.jpg" />
+
 
 <br>
 
