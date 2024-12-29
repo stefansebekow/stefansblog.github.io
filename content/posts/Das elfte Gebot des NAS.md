@@ -23,7 +23,7 @@ Langsame Lesezeiten können verherend sein, wenn häufig auf große Datenmengen 
 
 
 
-# Mögliche Alternativen beim NAS Setup 
+# 3. Mögliche Alternativen beim NAS Setup 
 
 Anstatt sich auf ein einzelnes riesiges Volume zu konzentrieren, sollten wir also über folgende Alternativen nachdenken!
 
@@ -36,6 +36,6 @@ Anstatt sich auf ein einzelnes riesiges Volume zu konzentrieren, sollten wir als
 * Nutzung von Cloud-Speicherdiensten für Archivierung und Backup in Form einer Drittsicherung.
 
 
-# Das Fazit
+# Zusammenfassung
 
 Während es natürlich technisch möglich ist, ein +100 TB großes RAID 5 Volume auf einem NAS zu fahren, ist es reines Glücksspiel, dass es hier nicht einmal zu einem kompletten Datenverlust kommt. Das Argument, "dass eine Hotspare verbaut sei" genügt in diesem Fall nicht. Während des ewig langen Rebuild-Prozesses wirst du mit diesem Wissen und falls es kein gutes Backup gibt, Nachts kein Auge zu bekommen!  
