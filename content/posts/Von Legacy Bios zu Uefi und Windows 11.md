@@ -1,5 +1,5 @@
 ---
-title: "Von Legacy Bios zu Uefi und Windows 11"
+title: "Von Legacy Bios zu Uefi und Win 11"
 date: 2025-01-25
 description:  ""
 
