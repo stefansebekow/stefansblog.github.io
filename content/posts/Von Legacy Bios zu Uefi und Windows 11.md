@@ -1,11 +1,9 @@
 ---
-title: "Von Legacy/MBT zu Uefi und Windows 11"
+title: "Von Legacy Bios zu Uefi und Windows 11"
 date: 2025-01-25
-description:  "Nächster Halt, Windows 11"
+description:  ""
 
 ---
-
-# Von MBR, GPT, Bios und UEFI
 
 Mir begegnen erstaunlicherweise immer noch viele Unternehmen mit Windows PCs im Legacy Mode. Damit wird in naher Zukunft Schluss sein. Mit dem umstieg auf Windows 11 werden die meisten dieser Clients das zeitliche segnen, denn spätestens hier muss über UEFI gebooted werden. 
 
