@@ -5,17 +5,17 @@ description:  "Nächster Halt, Windows 11"
 
 ---
 
-*MBR, GPT, Bios und UEFI*
+# Von MBR, GPT, Bios und UEFI
 
-Mir begegnen erstaunlicherweise immer noch viele Unternehmen mit Windows PCs im Legacy Mode. Damit wird in naher Zukunft Schluss sein. Spätestens mit dem umstieg auf Windows 11 werden die meisten dieser Clients das zeitliche segnen. 
+Mir begegnen erstaunlicherweise immer noch viele Unternehmen mit Windows PCs im Legacy Mode. Damit wird in naher Zukunft Schluss sein. Mit dem umstieg auf Windows 11 werden die meisten dieser Clients das zeitliche segnen, denn spätestens hier muss über UEFI gebooted werden. 
 
-Betroffen sind vor allem ältere oder günstigere Flotten an Geräten, die ihren regelmäßigen Austausch verpasst haben oder beim Umstieg auf zb. Windows 10 nie vollständig auf moderne Technologien wie UEFI aktualisiert wurden.
+Betroffen sind ältere oder günstigere Flotten an Geräten, die ihren regelmäßigen Austausch verpasst haben oder beim Umstieg auf zb. Windows 10 nie vollständig auf moderne Technologien wie UEFI aktualisiert wurden.
 
-Bei der leider zwingenden Vorbereitung einer größeren Anzahl von Clients auf Windows 11, mit der Vorgabe im Idealfall ein InPlace Upgrade und keine Neuinstallation auf Windows 11 ohne Daten oder Konfigurationsverluste durchzuführen, wurde es daher knifflig.
+Bei der zwingenden Vorbereitung einer größeren Anzahl von Clients auf Windows 11, mit der Vorgabe im Idealfall ein InPlace Upgrade und keine Neuinstallation auf Windows 11 ohne Daten oder Konfigurationsverluste durchzuführen, wird es definitiv zu Problemen kommen. Die sauberste Migration ist eine Neuinstallation. Das steht fest. 
 
-Auf den ersten Blick war klar, dass die Clients auf UEFI und damit GPT umgestellt werden mussten. An anderer Stelle hätte ich jetzt gerne etwas zu SCCM oder den Gefahren dieses Vorgehens geschrieben.
+Sollen die Clients aber auf UEFI und damit GPT umgestellt werden muss man sich etwas einfallen lassen. Zum Glück gibt es dafür in Windows 10 Bordmittel. An anderer Stelle hätte ich jetzt gerne etwas zu SCCM oder den Gefahren dieses Vorgehens geschrieben aber das soll hier nicht das Thema sein.
 
-* Booten über BIOS und UEFI *
+## Booten über BIOS und UEFI 
 
 Sucht man den Weg von Legacysystemen zu UEFI, dann kann man sich den Unterschied zwischen den Partionsstilen MBR und GPT ansehen.
 
@@ -30,13 +30,13 @@ ist ein wichtiger Unterschied das hier in GPT formatierte Speichersystem. UEFI u
 
 Um also von MBR zu GPR zu wechseln, benötigt man also einerseits eine Partitionskonvertierung in GPT und eine neue EFI-Systempartition, die den MBR Sektor ersetzt. Andererseits benötigt es noch den richtigen Bootloader als ESP Eintrag. Daher ist der Wechsel mit einer bloßen Partitionierung und Konvertierung nicht erledigt und der Umstieg per zb. Diskpart nicht trivial.
 
-*Konvertierung mit MBR2GPT*
+## Konvertierung mit MBR2GPT
 
 Mit den neueren Windows 10 Versionen und Windows 11 gibt es für die Umstellung von MBR zu GPT daher das kostenlose Tool MBR2GPT von Microsoft:
 
 MBR2GPT kann mit Glück ohne Datenverlust durchgeführt werden, aus Windows PE oder dem vollständigen Windows-System ausgeführt werden und BitLocker-Volumes können unterstützt werden (Ausschalten erforderlich).
 
-*Wie funktioniert MBR2GPT?*
+## Wie funktioniert MBR2GPT?
 
 MBR2GPT.EXE ist ein Werkzeug, das eine Festplatte vom Master Boot Record (MBR)-Format ins GUID Partition Table (GPT)-Format konvertiert, ohne dabei Daten auf der Platte zu löschen oder zu überschreiben.
 
@@ -50,13 +50,13 @@ MBR2GPT.EXE ist ein Werkzeug, das eine Festplatte vom Master Boot Record (MBR)-F
 
 - Schließlich werden automatisiert neue Bootdateien installiert, um das System zum Starten in UEFI-Modus zu ermöglichen.
 
-*Nach der Konvertierung...*
+## Nach der Konvertierung
 
 Nach der erfolgreichen Umstellung auf GPT kann der Versuch unternommen werden die Festplatte aus der alten Hardware in ein neues Gerät, dass zum Beispiel TPM 2.0 unterstützt, umzuziehen ohne das System neu aufsetzen zu müssen.
 
 Aber auch hier kann es bei größeren Clientzahlen erfahrungsgemäß zu massiven Problemen kommen. Zuerst müssen die passenden Gerätetreiber ergänzt werden und nach Firmwareupgrades funktionierten bei einer Reihe an Systemen, die von HP zu Dell zogen auf einmal keine Remotedesktopverbindungen in Windows mehr. Dies wurde durch die Aktivierung der Uefi-Option "Intel Trusted Execution Technology" wieder möglich. Das nächste Stichwort wären vermutlich Probleme mit dem Chipsatz. Um einen anschließenden Langzeittest wird man hier also nicht herumkommen.
 
-*TLDR*
+## Fazit
 
 Die Umstellung auf UEFI/GPT ist lange überfällig und sollte in den meisten Unternehmen schon mit dem Umstieg zu Windows 10 erfolgt sein. Der gründliche Weg führt daher größtenteils über eine Formatierung und Neuinstallation der vorliegenden Systemfestplatten oder einem Komplettaustausch. Es gibt jedoch Möglichkeiten ohne Datenverluste und Neuinstallation umzuziehen. Auch diese nicht ganz ohne Risiko und Komplikationen. Dies ist aber gerade dort essenziell, wo lückenhafte Dokumentation über den Konfigurationszustand der vorliegenden Clients vorliegt und gleichzeitig Zeitdruck besteht.
 
