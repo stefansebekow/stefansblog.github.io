@@ -5,17 +5,15 @@ description:  ""
 
 ---
 
-Mir begegnen erstaunlicherweise immer noch viele Unternehmen mit Windows PCs im Legacy Mode. Damit wird in naher Zukunft Schluss sein. Mit dem umstieg auf Windows 11 werden die meisten dieser Clients das zeitliche segnen, denn spätestens hier muss über UEFI gebooted werden. 
+Mir begegnen erstaunlicherweise immer noch viele Unternehmen mit Windows PCs im Legacy Mode. Betroffen sind ältere oder günstigere Flotten an Geräten, die ihren regelmäßigen Austausch verpasst haben oder beim Umstieg auf Windows 10 nie vollständig auf moderne Firmware aktualisiert wurden.
 
-Betroffen sind ältere oder günstigere Flotten an Geräten, die ihren regelmäßigen Austausch verpasst haben oder beim Umstieg auf zb. Windows 10 nie vollständig auf moderne Technologien wie UEFI aktualisiert wurden.
+Bei der zwingenden Vorbereitung einer größeren Anzahl Clients auf Windows 11, mit der Vorgabe im Idealfall ein Inplace-Upgrade per GPO oder SCCM ohne Daten oder Konfigurationsverluste durchzuführen, wird es definitiv zu Problemen kommen. Die sauberste Vorbereitung wäre auf jeden Fall eine Neuinstallation.
 
-Bei der zwingenden Vorbereitung einer größeren Anzahl von Clients auf Windows 11, mit der Vorgabe im Idealfall ein InPlace Upgrade und keine Neuinstallation auf Windows 11 ohne Daten oder Konfigurationsverluste durchzuführen, wird es definitiv zu Problemen kommen. Die sauberste Migration ist eine Neuinstallation. Das steht fest. 
-
-Sollen die Clients aber auf UEFI und damit GPT umgestellt werden muss man sich etwas einfallen lassen. Zum Glück gibt es dafür in Windows 10 Bordmittel. An anderer Stelle hätte ich jetzt gerne etwas zu SCCM oder den Gefahren dieses Vorgehens geschrieben aber das soll hier nicht das Thema sein.
+Sollen die Clients aber auf UEFI und damit GPT umgestellt werden, indem Festplatten das Gerät wechseln, muss man sich etwas einfallen lassen. Dafür gibt es in Windows 10 Bordmittel. An anderer Stelle hätte ich jetzt gerne etwas zu SCCM oder den Risikos dieses Vorgehens geschrieben aber das soll hier nicht das Thema sein.
 
 # Booten über BIOS und UEFI 
 
-Sucht man den Weg von Legacysystemen zu UEFI, dann kann man sich den Unterschied zwischen den Partionsstilen MBR und GPT ansehen.
+Sucht man den direkten Weg von Legacysystemen zu UEFI, dann muss man sich zu erst den Unterschied zwischen den Partionsstilen MBR und GPT ansehen.
 
 MBR steht für Master Boot Record. Dieser ist in keiner eigenen Partition und befindet sich als meist 512 Byte großer Block am Anfang des Speichersystems im Sektor 0. Es handelt sich um zwei Teile, wobei der erste ein in Assembler geschriebenen Codeabschnitt zum Systemstart und der zweite eine alle Informationen über die vorhandenen Partitionen und Dateisysteme enthaltene Partitionstabelle ist.
 
