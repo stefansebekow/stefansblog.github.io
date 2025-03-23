@@ -4,7 +4,7 @@ date: 2024-11-17
 description: Server Management mit Ansible - Teil I
 ---
 
-# Was ist Ansible
+# Was ist Ansible?
 
 Ansible ist eine leistungsstarke Open-Source-Plattform für die automatisierte Serveradministration. Mit der in den Konfigurationsdateien verwendeten, einfachen YAML-Syntax und agentlosen Architektur macht Ansible es möglich, komplexe IT-Aufgaben effizient zu automatisieren. Neben Ansible gibt es zwei weitere bekannte Tools für die Konfigurationsverwaltung: Puppet und Salt. Jedes dieser Tools hat seinen eigenen Ansatz zur Automatisierung.
 
@@ -17,7 +17,7 @@ Ein Vorteil von Ansible ist das Prinzip der Idempotenz, welches durch den deklar
 
 In diesem Ansible Task lasse ich in meinem Homelab automatisch Updates durchführen und führe anstehende Upgrades durch. Anschließend wird eine Variable gefüllt und somit geprüft, ob im Fall eines Kernelupdates oder veralteter Bibliotheken ein reboot nötig ist. Je ob es sich um einen Hypervisor oder die darauf laufenden Gastmaschinen handelt, wird der Neustart auf eine andere Zeit verlegt. 
 
-### Mein bisheriger Stand sieht so aus: 
+* Mein bisheriger Stand sieht so aus: 
 
 ---
 
