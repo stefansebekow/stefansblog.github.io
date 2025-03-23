@@ -64,12 +64,14 @@ In diesem Ansible Task lasse ich in meinem Homelab automatisch Updates durchfüh
 
 ```
 ---
+
 Ein weiteres und deutlicheres Beispiel für die Grundidee von Ansible ist der folgende task mit dem wir Konfigurationsabweichungen in der SSHD Config in regelmäßigen Abständen überschreiben können. Es mag sein, dass ich einmal auf eine Passwortanmeldung ausweichen muss und dafür die config ändere oder ein künftiges Upgrade der SSHD Config die bisherigen Anpassungen verwirft. Es mag sogar sein, dass ich vergesse die Änderung rückgängig zu machen. Wioe auch immer!
 <br><br>
 Im Grunde stellt Ansible dann aber den durch mich eigentlich gewollten Zustand (zb. nur ssh key, keine root anmeldung etc) in regelmäßigen Zeitabständen und durch das Einfügen eines Blocks am Anfang der Config ("first come first serve" Prinzip!) wieder her. 
 <br><br>
----
 
+
+---
 # Sichere SSHD Config erzwingen 
 
 ---
@@ -95,9 +97,8 @@ Im Grunde stellt Ansible dann aber den durch mich eigentlich gewollten Zustand (
     service:
       name: sshd
       state: restarted
-
-
 ```
+
 ---
+
 Das sind also zwei erste Beispiele für eine auf Ansible basierende und grundlegende Serveradministration. Durch die Verwendung von Playbooks, Roles und anderen fortgeschrittenen Funktionen lassen sich sebstverständlich auch noch komplexe Aufgaben automatisieren und wiederholen. Dazu in einem späteren Beitrag mehr.
----
