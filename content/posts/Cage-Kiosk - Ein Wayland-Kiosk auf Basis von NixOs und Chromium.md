@@ -8,9 +8,8 @@ Ich haben im Rahmen unserer Aufgaben mit einem Kollegen ein Kiosk-Setup entwerfe
 
 Bei der folgenden Lösung handelt es sich um NixOS 24.11, das nach dem Start "cage" ausführt.  Cage ist ein Wayland-Compositor für Kiosk-Anwendungen der ursprünglich ein Projekt von Jente Hidskes ist. In dieser Sandbox wird dann wiederum ein Chromium im Kiosk-Modus gestartet. 
 Aller Dank gebührt: 
->
-(https://github.com/cage-kiosk/cage) 
->
+
+>[https://github.com/cage-kiosk/cage](https://github.com/cage-kiosk/cage) 
 
 In dem Chromium läuft ein Add-On aus dem Chrome-Store "Kiosk-Extension", das eine Whitelist für die erlaubten Websites verwaltet und zudem als Overlay drei Buttons zur Verfügung stellt, mit denen die Nutzer bequem zwischen den 3 Seiten wechseln können. Tab- und Adressleiste sind im Kiosk-Modus aber ausgeschaltet.
 >
@@ -374,4 +373,4 @@ kann man anschließend die Änderung aktivieren. Das gerade genannte Vorgehen is
 ```
 
 
-## Vielen Dank an Peter fürs Vervollständigen und an SergeantBiggs für den initiallen Hinweis auf Cage und den NixOs Crashkurs :)  
+## Vielen Dank an Peter fürs Vervollständigen und an SergeantBiggs für den initialen Hinweis auf Cage und den NixOs Crashkurs :)  
