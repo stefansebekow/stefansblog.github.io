@@ -4,24 +4,25 @@ date: 2025-03-23
 description:  ""
 
 ---
+Ich haben im Rahmen unserer Aufgaben mit einem Kollegen ein Kiosk-Setup entwerfen dürfen. Ziel war, dass User unbeaufsichtigt an einem Rechner sitzen sollten und drei verschiedene Seiten über einen Browser aufrufen können sollten ohne Änderungen am System vornehmen zu können. Dabei sollte kein Zugriff auf das Dateisystem möglich sein. Auch nicht-PC-versierte Nutzerinnen sollen damit zurecht kommen und die Konfiguration sollte unveränderbar sein. Damit schieden sehr simple Lösungen mit Windows-Bordmitteln oder einem Mozilla Kiosk aus.
 
-*Cage-Kiosk: Ein Wayland-Kiosk auf Basis von NixOS, Chromium, Wayland und Cage
+Bei der folgenden Lösung handelt es sich um NixOS 24.11, das nach dem Start "cage" ausführt.  Cage ist ein Wayland-Compositor für Kiosk-Anwendungen der ursprünglich ein Projekt von Jente Hidskes ist. In dieser Sandbox wird dann wiederum ein Chromium im Kiosk-Modus gestartet. 
+Aller Dank gebührt: 
+>
+(https://github.com/cage-kiosk/cage) 
+>
 
-Mein Kollege und ich haben im Rahmen unserer Aufgaben ein Kiosk-Setup entwerfen dürfen. Ziel war, dass User unbeaufsichtigt an einem Rechner sitzen sollten und drei verschiedene Seiten über einen Browser aufrufen können sollten ohne Änderungen am System vornehmen zu können:
-
-Dabei sollte kein Zugriff auf das Dateisystem möglich sein. Auch nicht-PC-versierte Nutzerinnen sollen damit zurecht kommen und die Konfiguration sollte unveränderbar sein. Damit schieden sehr simple Lösungen mit Windows-Bordmitteln oder einem Mozilla Kiosk aus.
-
-Bei der folgenden Lösung handelt es sich um NixOS 24.11, das nach dem Start "cage" (https://github.com/cage-kiosk/cage) ausführt.  Cage ist ein Wayland-Compositor für Kiosk-Anwendungen der ursprünglich ein Projekt von Jente Hidskes ist. In dieser Sandbox wird dann wiederum ein Chromium im Kiosk-Modus gestartet. 
-
-In dem Chromium läuft ein Add-On aus dem Chrome-Store ("Kiosk-Extension" - https://chromewebstore.google.com/detail/kiosk-extension/hbpkaaahpgfafhefiacnndahmanhjagi ), das eine Whitelist für die erlaubten Websites verwaltet und zudem als Overlay drei Buttons zur Verfügung stellt, mit denen die Nutzer bequem zwischen den 3 Seiten wechseln können. Tab- und Adressleiste sind im Kiosk-Modus aber ausgeschaltet.
-
+In dem Chromium läuft ein Add-On aus dem Chrome-Store "Kiosk-Extension", das eine Whitelist für die erlaubten Websites verwaltet und zudem als Overlay drei Buttons zur Verfügung stellt, mit denen die Nutzer bequem zwischen den 3 Seiten wechseln können. Tab- und Adressleiste sind im Kiosk-Modus aber ausgeschaltet.
+>
+https://chromewebstore.google.com/detail/kiosk-extension/hbpkaaahpgfafhefiacnndahmanhjagi
+>
 Die Iso für NixOS kann auf der Website geladen werden. Die Installation benötigt Internet. NixOs kann mit folgenden Kommandos von der Live-ISO installiert werden:
 
-*Installation*
+# Installationsskript
 
 
 ```
-!/bin/sh
+#!/bin/sh
 # Skript installiert NixOS mit Chrome im Kiosk-Modus in einer Cage-Umgebung
 echo "NixOS-Installationsskript"
 echo "Mit sudo ausführen"
@@ -60,11 +61,11 @@ nixos-install
 Die configuration.nix muss vorher auf einem LiveUSB-Stick abgelegt werden. Nach dem Reboot startet das System in den Kiosk-Modus. Hier installiert man die Erweiterung aus dem Chrome Web Store, macht ggf. noch weitere Anpassungen an der Config des Browser und schließt diesen dann. Mit [STRG]+[ALT]+[F2] wechselt man in tty2, meldet sich mit den Zugangsdaten an und kann die Konfigurationsdatei so bearbeiten, dass das System beim nächsten mal direkt fertig konfiguriert ist. Anschließend startet man einmal, installiert das KIOSK-AddOn im Chromium und lädt die Konfigurationsdatei. Eine Beispiel JSON findet sich ganz unten! 
 
 Mit 
-``` nixos-rebuild switch ``` 
+`nixos-rebuild switch` 
 kann man anschließend die Änderung aktivieren. Das gerade genannte Vorgehen ist auch die einzige Möglichkeit, um die Rechner zu warten.
 
 
-*configuration.nix*
+# Die configuration.nix
 
 ```
 # Edit this configuration file to define what should be installed on
@@ -201,7 +202,7 @@ kann man anschließend die Änderung aktivieren. Das gerade genannte Vorgehen is
 
 ```
 
-*CONFIG.JSON*
+# CONFIG.JSON für Chromium
 
 ```
 {
@@ -371,3 +372,6 @@ kann man anschließend die Änderung aktivieren. Das gerade genannte Vorgehen is
   }
 }
 ```
+
+
+## Vielen Dank an Peter fürs Vervollständigen und an SergeantBiggs für den initiallen Hinweis auf Cage und den NixOs Crashkurs :)  
