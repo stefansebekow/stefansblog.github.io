@@ -15,7 +15,11 @@ In dem Chromium läuft ein Add-On aus dem Chrome-Store "Kiosk-Extension", das ei
 
 [https://chromewebstore.google.com/detail/kiosk-extension/hbpkaaahpgfafhefiacnndahmanhjagi](https://chromewebstore.google.com/detail/kiosk-extension/hbpkaaahpgfafhefiacnndahmanhjagi)
 
-Die Iso für NixOS kann auf der Website geladen werden. Die Installation benötigt Internet. NixOs kann mit folgenden Kommandos von der Live-ISO installiert werden:
+Die Iso für NixOS kann auf der Website geladen werden. 
+
+[https://nixos.org/download/](https://nixos.org/download/)
+
+Die Installation benötigt Internet. NixOs kann mit folgenden Kommandos von der Live-ISO installiert werden:
 
 # Installationsskript
 ---
