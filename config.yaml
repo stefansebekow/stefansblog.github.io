@@ -76,7 +76,7 @@ params:
 
 
   homeInfoParams:
-    Title: "Hi! Mein Name ist Stefan. Willkommen auf meinem Blog."
+    Title: "Hi! Mein Name ist Stefan.<br>Willkommen auf meinem Blog."
     Content: >
      Ich bin mit Leidenschaft IT-Systemadministrator und interessiere mich für alles rund um Administration,
      Netzwerk und IT-Sicherheit. In diesem Blog dokumentiere ich alte und zukünftige Projekte, während ich besser Programmieren lerne und meine Powershell- und Bash-Kenntnisse verbessere. 
