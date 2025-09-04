@@ -17,7 +17,7 @@ Ich interessiere mich momentan besonders für alle Themen rund um cloudbasierte 
 
 
 <br>
-<img class="special-img-class" src="/images/Lebenslauf_StefanSebekow_1.jpg" />
+<img class="special-img-class" src="/images/Lebenslauf_StefanSebekow_2.jpg" />
 <brbr>
 
 
