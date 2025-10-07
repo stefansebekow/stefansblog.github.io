@@ -1,10 +1,10 @@
 ---
-title: "Hyperkonvergente Infrastruktur mit Proxmox und Ceph.md"
+title: "Hyperkonvergente Infrastruktur mit Proxmox und Ceph"
 date: 2025-10-07
 description:  ""
 
 ---
-Viele Unternehmen stehen aktuell vor der Herausforderung, dass VMware durch die Änderungen der Lizenz- und Preisgestaltungkleinere kleinere Vorhaben stark belastet. Dauerlizenzen verschwinden, die Preisaufschläge sind massiv und Supportkosten steigen. Deshalb wird Proxmox als Alternative immer interessanter. Ich setze privat und auch im Berufsfeld schon seit längerer Zeit Proxmox für interne Dienste ein. Mit den Änderungen um Proxmox 9 wird dieser Hypervisor jetzt sowohl für alte Infrastruktur, als auch neue ein guter Nachfolger. [ProxmoxVE]([https://www.proxmox.com]) ist eine Open-Source-Plattform für Virtualisierung, die Container, VMs, Netzwerk und Storage unter einer Oberfläche vereint. Im Zusammenspiel mit [CEPH](https://ceph.io/en/discover/) entsteht daraus eine hyperkonvergente Infrastruktur. Das bedeutet: Rechenleistung und Speicher werden nicht getrennt organisiert, sondern auf denselben Knoten bereitgestellt. Jeder Host ist gleichzeitig Compute-Node und Storage-Node. 
+Viele Unternehmen stehen aktuell vor der Herausforderung, dass VMware durch die Änderungen der Lizenz- und Preisgestaltung kleinere Vorhaben stark belastet. Dauerlizenzen verschwinden, die Preisaufschläge sind massiv und Supportkosten steigen. Deshalb wird Proxmox als Alternative immer interessanter. Ich setze privat und auch im Berufsfeld schon seit längerer Zeit Proxmox für interne Dienste ein. Mit den Änderungen um Proxmox 9 wird dieser Hypervisor jetzt sowohl für alte Infrastruktur, als auch neue ein guter Nachfolger. [ProxmoxVE](https://www.proxmox.com) ist eine Open-Source-Plattform für Virtualisierung, die Container, VMs, Netzwerk und Storage unter einer Oberfläche vereint. Im Zusammenspiel mit [CEPH](https://ceph.io/en/discover/) entsteht daraus eine hyperkonvergente Infrastruktur. Das bedeutet: Rechenleistung und Speicher werden nicht getrennt organisiert, sondern auf denselben Knoten bereitgestellt. Jeder Host ist gleichzeitig Compute-Node und Storage-Node. 
 
 # Proxmox VE 9 hat jetzt ISCSI+FC Snapshot-Support für klassische Shared-Storage-Systeme
 
