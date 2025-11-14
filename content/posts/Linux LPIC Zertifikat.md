@@ -1,6 +1,6 @@
 ---
 title: Warum die Vorbereitung für das LPIC-1 Zertifikat nützlich ist, selbst wenn man die Prüfung nicht macht!
-date: 2022-10-06
+date: 2023-10-06
 description: "Die weltweit größte und anerkannteste Linux-Zertifizierung LPIC-1 ist die erste im mehrstufigen Linux Professional-Zertifizierungsprogramm des Linux Professional Institute (LPI)."
 ---
 

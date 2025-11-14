@@ -1,6 +1,6 @@
 ---
 title: Mach den ComptiA+ und starte im IT Bereich! 
-date: 2022-10-05
+date: 2023-10-05
 description: "CompTIA A+ ist ein erstes Einsteigerzertifikat für alle IT-Quereinsteiger*innen. CompTIA A+ zertifizierte Fachkräfte sind bewährte Problemlöser aber zeigen vor allem die Bereitschaft und Leidenschaft zur dauerhaften Weiterbildung. Ich bin überzeugt, dass A+ ein guter Start für diese Reise ist." 
 
 
