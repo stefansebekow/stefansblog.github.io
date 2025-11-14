@@ -8,7 +8,7 @@ description:  ""
 
 ## **System... was?**
 
-Systemd ist heute für jeden Linux-Admin ein gängiger Standard, wenn es darum geht, Dienste und Systemeinstellungen unter Linux zu verwalten oder bei Problemen zu analysieren. Dabei handelt es sich um eine umfangreiche Sammlung aus Programmen, Daemons und Bibliotheken, die gemeinsam den Start, das Management und das Herunterfahren eines Linux-Systems steuern.
+[**systemd**](https://systemd.io/) ist heute für jeden Linux-Admin ein gängiger Standard, wenn es darum geht, Dienste und Systemeinstellungen unter Linux zu verwalten oder bei Problemen zu analysieren. Dabei handelt es sich um eine umfangreiche Sammlung aus Programmen, Daemons und Bibliotheken, die gemeinsam den Start, das Management und das Herunterfahren eines Linux-Systems steuern.
 
 Systemd strukturiert seine Aufgaben in sogenannte **Units** und fasst mehrere einzelne Units wiederum zu **Targets** zusammen. Das ermöglicht ein flexibles und performantes System zur Steuerung des gesamten Systemstarts und vieler Hintergrunddienste.
 
