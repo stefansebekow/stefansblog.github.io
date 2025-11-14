@@ -6,7 +6,7 @@ description:  ""
 ---
 
 
-## **Systemd – Das Herzstück der modernen System- und Dienstverwaltung**
+## **System... was?**
 
 Systemd ist heute für jeden Linux-Admin ein gängiger Standard, wenn es darum geht, Dienste und Systemeinstellungen unter Linux zu verwalten oder bei Problemen zu analysieren. Dabei handelt es sich um eine umfangreiche Sammlung aus Programmen, Daemons und Bibliotheken, die gemeinsam den Start, das Management und das Herunterfahren eines Linux-Systems steuern.
 
