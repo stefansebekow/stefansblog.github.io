@@ -17,8 +17,6 @@ Ein Vorteil von Ansible ist das Prinzip der Idempotenz, welches durch den deklar
 
 In diesem Ansible Task lasse ich in meinem Homelab automatisch Updates durchführen und führe anstehende Upgrades durch. Anschließend wird eine Variable gefüllt und somit geprüft, ob im Fall eines Kernelupdates oder veralteter Bibliotheken ein reboot nötig ist. Je ob es sich um einen Hypervisor oder die darauf laufenden Gastmaschinen handelt, wird der Neustart auf eine andere Zeit verlegt. 
 
-* Mein bisheriger Stand sieht so aus: 
-
 ---
 
 ```

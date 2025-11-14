@@ -1,6 +1,7 @@
 baseURL: "https://stefansblog.org"
 title: stefansblog
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: [hugo-WonderMod]
 
 enableInlineShortcodes: true
