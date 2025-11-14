@@ -37,29 +37,25 @@ Systemd übernimmt und startet alle notwendigen Dienste anhand definierter Abhä
 ---
 ## **Systemd lernen und verstehen**
 
-Experimente mit systemd empfand ich als lehrreich, aber ich spreche aus eigener Erfahrung: Man sollte wissen, was man tut. Wenn man sich verbastelt, kann ein System leicht in einem kaputten Zustand landen. Daher möchte ich an dieser Stelle ein praktisches Tool vorstellen, das mir schon vor langer Zeit empfohlen wurde. 
+Experimente mit systemd empfand ich als lehrreich, aber ich spreche aus eigener Erfahrung: Man sollte wissen, was man tut. Wenn man sich verbastelt, kann ein System leicht in einem kaputten Zustand landen. Daher möchte ich an dieser Stelle eine praktische Webseite vorstellen, das mir schon vor langer Zeit empfohlen wurde. 
 
 
 ## **Ein praktisches Tool zum Lernen von systemd**
 
-Ein praktisches Tool, das mir bereits vor langer Zeit von einem Freund empfohlen wurde, ist:
+Eine praktische Einführung in **systemd**, die mir bereits vor langer Zeit von einem Freund empfohlen wurde, ist:
 
 **[systemd-by-example.com](https://systemd-by-example.com)**
 
-Es stammt von **[Sebastian Jambor](https://seb.jambor.dev/)**.
+Die Seite stammt von **[Sebastian Jambor](https://seb.jambor.dev/)**.
 
-Wie der Name schon sagt, hilft dieses Projekt dabei, systemd am Beispiel zu lernen und zu verstehen.  
-Man kann damit den Startvorgang nachvollziehen, ihn manipulieren, eigene Units schreiben und diese anschließend zu Targets zusammenfassen. Damit eignet sich die Seite perfekt, um systemd Schritt für Schritt zu begreifen und gleichzeitig selbst zu experimentieren.
+Wie der Name schon sagt, hilft dieses Projekt dabei, systemd anhand von Beispielen zu lernen und zu verstehen. Die virtuelle Umgebung ermöglicht es, systemd interaktiv direkt im Browser zu erkunden. Beispiele können erstellt werden, ohne das eigene System zu gefährden.
 
-Besonders hilfreich ist, dass das Tool einen mithilfe einer virtuellen Umgebung durch die erste Lektion führt, in der der grundlegende Aufbau des systemd-Init-Prozesses erklärt wird. Dadurch kann man gefahrlos experimentieren, ohne das eigene System zu beschädigen.
+In den ersten Lektionen kann man die vierte Phase des Startvorgangs nachvollziehen, manipulieren, eigene Units schreiben und vieles mehr. Damit eignet sich die Seite perfekt, um systemd Schritt für Schritt zu begreifen und gleichzeitig selbst zu experimentieren.
 
-Weiteres vertiefendes Wissen findet man in der vierteiligen Artikelserie von Sebastian Jambor:
+Besonders hilfreich ist, dass das Tool einen mithilfe einer virtuellen Umgebung durch die erste Lektion führt, in der der grundlegende Aufbau des systemd-Init-Prozesses erklärt wird.  
 
-- **[Systemd by Example – Part 1](https://seb.jambor.dev/posts/systemd-by-example-part-1/)**
-- **[Systemd by Example – Part 2](https://seb.jambor.dev/posts/systemd-by-example-part-2/)**
-- **[Systemd by Example – Part 3](https://seb.jambor.dev/posts/systemd-by-example-part-3/)**
-- **[Systemd by Example – Part 4](https://seb.jambor.dev/posts/systemd-by-example-part-4/)**
+Es gibt insgesamt vier Teile, die alle auf einer Podman-basierten Ubuntu-VM getestet werden können.
 
-Diese Artikel bieten eine hervorragende Ergänzung zur interaktiven Lernumgebung und führen Schritt für Schritt tiefer in den Aufbau und die Funktionsweise von systemd.
+Zusätzlich bieten begleitende Artikel eine hervorragende Ergänzung zur interaktiven Lernumgebung und führen Schritt für Schritt tiefer in den Aufbau und die Funktionsweise von systemd ein.
 
 Vielen Dank an dieser Stelle für die tolle Arbeit und das großartige Tool!
