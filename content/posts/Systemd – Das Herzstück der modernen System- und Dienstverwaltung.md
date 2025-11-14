@@ -1,5 +1,5 @@
 ---
-title: "Systemd lernen und verstehen"
+title: "Systemd - Das Herzstuck moderner Linuxsysteme lernen und verstehen"
 date: 2025-11-14
 description:  ""
 
