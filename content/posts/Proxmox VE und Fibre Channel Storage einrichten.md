@@ -7,7 +7,7 @@ categories: ["Virtualisierung", "Storage", "Linux"]
 
  # Hochverfügbares SAN-Storage im Proxmox-Cluster sauber integrieren
 
-In diesem Artikel zeige ich praxisnah, wie man in einem 3‑Node‑Proxmox‑Cluster mit Fibre‑Channel‑Anbindung ein Shared Storage sauber und hochverfügbar einbindet. Ziel ist es, zwei vom SAN bereitgestellte LUNs über "DM‑Multipath" zu bündeln und anschließend als Shared LVM Storage im Cluster bereitzustellen.
+In diesem Artikel zeige ich praxisnah, wie man in einem 3‑Node‑Proxmox‑Cluster mit Fibre‑Channel‑Anbindung ein Shared Storage sauber und hochverfügbar einbindet. Ziel ist es, zwei vom SAN bereitgestellte LUNs über *DM‑Multipath*" zu bündeln und anschließend als *Shared LVM Storage* im Cluster bereitzustellen.
 
 --- 
 
@@ -27,7 +27,7 @@ Auf dem SAN‑Storage wurden bei der Ersteinrichtung bereits zwei LUNs bereitges
 
 ## Warum Multipath zwingend notwendig ist
 
-Die Einrichtung von Multipath‑Connectivity in einem Proxmox‑Cluster ist eine Voraussetzung für den stabilen und hochverfügbaren HA Betrieb von VMS, die von einem SAN bereitgestellt werden. Multipathing sorgt dafür, dass auf ein Storage‑Gerät redundant zugegriffen werden kann. Fällt ein Pfad oder eine Komponente aus, bleibt der Zugriff auf das Gerät erhalten und greift auf die sekundären Pfade zurück. Das sogenannte *Device Mapper Multipathing (DM‑Multipathing)* sorgt dafür, dass mehrere physische Pfade zu einer LUN als ein logisches Gerät zusammengeführt werden können. Fällt ein FC‑Pfad, ein HBA oder ein Controller aus, bleibt der Zugriff bestehen.
+Die Einrichtung von *Multipath‑Connectivity* in einem Proxmox‑Cluster ist eine Voraussetzung für den stabilen und hochverfügbaren HA Betrieb von VMS, die von einem SAN bereitgestellt werden. Multipathing sorgt dafür, dass auf ein Storage‑Gerät redundant zugegriffen werden kann. Fällt ein Pfad oder eine Komponente aus, bleibt der Zugriff auf das Gerät erhalten und greift auf die sekundären Pfade zurück. Das sogenannte *Device Mapper Multipathing (DM‑Multipathing)* sorgt dafür, dass mehrere physische Pfade zu einer LUN als ein logisches Gerät zusammengeführt werden können. Fällt ein FC‑Pfad, ein HBA oder ein Controller aus, bleibt der Zugriff bestehen.
 
 Wichtig ist dabei: Alle Cluster‑Knoten müssen auf dasselbe Multipath‑Gerät zugreifen, damit LVM‑basierte VMs korrekt funktionieren. Nur wenn jedes Node exakt dieselbe LUN über denselben WWID‑Multipath‑Device sieht, ist ein stabiler und hochverfügbarer Betrieb über die gemeinsam geteilten Metadaten möglich.
 
@@ -68,7 +68,7 @@ multipath -r
 # Für alle WWIDs wiederholen!
 systemctl restart multipathd
 ```
-## Beispielausgabe der korrekt konfigurierten Multipath-Setups bei zwei Luns über jeweils 8 gebündelte Pfase 
+## Beispielausgabe der korrekt konfigurierten Multipath-Setups bei zwei Luns über jeweils 8 gebündelte Pfade
 
 Teile der Ausgabe sind mit […] abgekürzt
 
@@ -137,7 +137,7 @@ In der Proxmox‑Gui:
 * Haken bei Shared setzen
 * Speichern
 
-Damit steht das SAN‑Storage clusterweit zur Verfügung. Je nach SAN Storage wird eine angepasste Multipath.conf benötigt, die zb. verhindert das lokale Geräte beim Boot im Multipathing gemounted werden: 
+Damit steht das SAN‑Storage clusterweit zur Verfügung. Je nach SAN Storage wird eine angepasste Multipath.conf benötigt, die zb. verhindert das lokale Geräte beim Boot im Multipathing gemounted werden. Hier ein Versuch einer generischen Datei. Ich warne davor diese ungeprüft zu übernehmen: 
 
 ```
 # /etc/multipath.conf
