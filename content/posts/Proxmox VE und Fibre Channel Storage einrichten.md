@@ -1,5 +1,5 @@
 ---
-title: "Fibre Channel SAN-Storage und Proxmox-Cluster per Multipath integrieren"
+title: "Anleitung: Fibre Channel Storage als Shared Storage für Proxmox-Cluster und Multipath"
 date: 2026-03-01
 tags: ["Proxmox", "Fibre Channel", "Multipath", "SAN", "Cluster", "LVM"] 
 categories: ["Virtualisierung", "Storage", "Linux"]
