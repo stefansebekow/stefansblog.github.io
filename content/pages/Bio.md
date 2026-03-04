@@ -10,9 +10,9 @@ image: images/Lebenslauf_StefanSebekow_07072022_1.jpg
 # Wo geht die Reise hin?
 
 Mein aktuelles Ziel ist mich weiter im Bereich der **System- und 
-Netzwerkadministration** zu spezialisieren. Dabei liegen meine Stärken in der Teamorganisation und Planung. 
+Netzwerkadministration** zu spezialisieren. Dabei liegen meine Stärken in der Teamorganisation und Projektplanung. 
 <br><br>
-Ich interessiere mich momentan besonders für alle Themen rund um cloudbasierte IT-Services, Automatisierung via Ansible, Linux- und Windows Server Administration, sowie die Erweiterung meiner Grundlagen im Bereich PowerShell, Bash und Python.
+Ich interessiere mich momentan besonders für Themen rund um Proxmox, Ansible, Storagelösungen, Clientmanagementsysteme,  Linux- & Windows Server Administration, sowie die Erweiterung meiner Grundlagen im Bereich PowerShell, Bash und Python.
 <brbr>
 
 
@@ -25,8 +25,7 @@ Ich interessiere mich momentan besonders für alle Themen rund um cloudbasierte 
 
 # Wo komme ich her?
 
-Nach dem Abitur habe ich eine Ausbildung als Tontechniker absolviert und aktiv Musik gemacht, einen Bachelor im Bereich der Sprach- und Kulturwissenschaften und anschließend meinen Master im Fachbereich Medienwissenschaft abgeschlossen. Anschließend habe ich mich entschlossen, als IT-Systemadministrator quer einzusteigen. Durch meinen bisherigen Bildungs- und Berufsweg habe ich umfangreiche Praxiserfahrung im Bereich der Unternehmenskommunikation, des dienstleistungsorientierten Kundenservice und der medienbasierten Arbeitswelt machen können.
+Nach meinem Abitur absolvierte ich zunächst eine Ausbildung zum Tontechniker und schloss anschließend einen Bachelor in Sprach- und Kulturwissenschaften sowie einen Master in Medienwissenschaft ab. Heute arbeite ich als IT-Systemadministrator und habe meinen beruflichen Fokus konsequent auf IT-Infrastruktur und Systembetrieb ausgerichtet. Durch meinen bisherigen Bildungs- und Berufsweg habe ich umfangreiche Praxiserfahrung im Bereich der Unternehmenskommunikation, des dienstleistungsorientierten Kundenservice und der medienbasierten Arbeitswelt machen können. Mein interdisziplinärer Hintergrund verbindet technisches Verständnis mit analytischem Denken und Kommunikationsfähigkeit.
 <br><br>
-Zu meinen aktuellen Lieblingsprojekten gehörte die Installation einer PV-Anlage inklusive Integration in ein bestehendes Smart-Home-System und die Anbindung an eine zugehörige Datenbank, sowie mein auf Proxmox basierendes Homelab. 
-Wenn ich wählen müsste: Debian
+Zu meinen aktuellen Projekten zählen die Integration einer PV-Anlage in ein bestehendes Smart-Home-System mit Datenbankanbindung sowie der Aufbau und Betrieb eines Proxmox-basierten Homelabs. Mein Schwerpunkt liegt auf Linux-basierten Systemen. Wenn ich wählen müsste: Debian
 
