@@ -32,4 +32,4 @@ Die Erkenntnis daraus ist einfach: Wenn Wake on LAN nicht funktioniert, obwohl d
 
 ## Weitere Infos
 
-Weitere Informationen zu DeepSleepControl und allen Uefi-Firmware Settings unter modernen Dell Desktopsystemen finden sich im [**Dell Support Manual**](https://www-dell-com.translate.goog/support/manuals/de-de/dell-cmnd-config-v3.1/dcc_cli/-deepsleepctrl?guid=guid-04137b19-fd27-4bc1-bd8e-ee42ee274f33&lang=en-us&_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=rq)  
+Weitere Informationen zu DeepSleepControl und allen Uefi-Firmware Settings unter modernen Dell Desktopsystemen finden sich im [**Dell Support Manual**](https://www.dell.com/support/manuals/de-de/dell-cmnd-config-v3.1/dcc_cli/-deepsleepctrl)  
